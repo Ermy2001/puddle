@@ -24,6 +24,10 @@ SECRET_KEY = 'django-insecure-d(^jelu5e+4c)c91=^2j1m@7424vk4)k3+66f@+3869ltvk$e9
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
 
 ALLOWED_HOSTS = []
 
@@ -39,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'item',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -121,6 +126,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
 # Default primary key field type

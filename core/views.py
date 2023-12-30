@@ -34,3 +34,6 @@ def signup(request):
     return render(request, 'core/signup.html', {
         'form': form
     })
+
+def base1(request):
+    return render(request, 'core/base1.html')
